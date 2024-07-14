@@ -1,0 +1,171 @@
+body {
+    background-color: #e87995;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 10px ;
+    font-family: Arial, sans-serif;
+}
+
+#boton {
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 35px;
+    border: 5px solid #cc6c84;
+    margin: 25px;
+}
+
+#mensaje {
+    margin-top: 5px;
+    font-size: 40px;
+    color: #425183;
+    margin: 18px;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+ .vela {
+    width: 20px;
+    height: 100px;
+    background-color: #eece1a;
+    border-radius: 5px;
+    position: relative;
+    margin: 0px;
+}
+
+.llama {
+    width: 12px;
+    height: 20px;
+    background-color: #f84808f1;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(232, 66, 6, 0.5);
+    animation: flicker 1s infinite alternate;
+}
+@keyframes flicker {
+    0% { opacity: 33; }
+    50% { opacity: 0.9; transform: translateX(-50%) translateY(-3px); }
+    100% { opacity: 2; }
+}
+
+.piso1 {
+    width: 250px;
+    height: 100px;
+    background-color: #2db4bc;
+    margin: 0px;
+    border: 2px  solid#39c7cf;
+    border-radius: 100px;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ } 
+
+ .piso2 {
+    width: 340px;
+    height: 140px;
+    background-color: #6b8cc5;
+    margin: 0px;
+    border: 2px  solid#7192cb;
+    border-radius: 100px;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ } 
+
+.piso3 {
+    width: 400px;
+    height: 200px;
+    background-color: #9bfab0;
+    margin: 0px;
+    border: 2px  solid#7cc87c;
+    border-radius: 100px;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ } 
+
+ .piso4 {
+    width: 440px;
+    height: 240px;
+    background-color: #2db4bc;
+    margin: 0px;
+    border: 2px  solid#42bfc5;
+    border-radius: 100px;
+    text-align: center;
+    font-size:45px;
+    align-items: center;
+    color: #6481b5;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ } 
+
+ .piso5 {
+    width: 500px;
+    height: 300px;
+    background-color: #6b8cc5;
+    margin: 0px;
+    border: 2px  solid#6481b5;
+    border-radius: 100px;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ }  
+
+ .piso6 {
+    width: 540px;
+    height: 340px;
+    background-color: #9dfcb2;
+    margin: 0px;
+    border: 2px  solid#95eba7;
+    border-radius: 100px;
+    animation: movimiento 4s infinite alternate, colorCambio 5s infinite alternate, escalado 5s infinite alternate;
+ } 
+ @keyframes escalado {
+    5% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
+#fireworks-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.firework {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF;
+    animation: launch 1s ease-out, explode 1.5s ease-out 1s;
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-500px);
+        opacity: 1;
+    }
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
